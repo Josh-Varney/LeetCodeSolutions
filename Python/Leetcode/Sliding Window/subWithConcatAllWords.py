@@ -2,6 +2,7 @@ import copy
 
 
 class Solution:
+    
     def findSubstring(self, s: str, words: list[str]) -> list[int]:  # Works for 178 / 179 cases (Time limit Succeeded)
         res = []
         l = 0
@@ -25,6 +26,31 @@ class Solution:
                     break
                 
             if copy_words == []:
+                res.append(l)
+            
+            l += 1
+        
+        return res
+    
+    def findSubstringTwo(self, s: str, word: list[str]) -> list[int]:
+        if not word:
+            return []
+        
+        wMap = {}
+        for c in word:
+            wMap[c] = wMap.get(c, 0) + 1
+        
+        
+        l = 0 
+        res = []
+        for r in range(len(word[0])*len(word), len(s)+1):
+            sMap = {}
+            for i in range(l, r, len(word[0])):
+                if s[i:i+len(word[0])] not in wMap:
+                    break
+                sMap[s[i:i+len(word[0])]] = sMap.get(s[i:i+len(word[0])], 0) + 1
+            
+            if sMap == wMap:
                 res.append(l)
             
             l += 1
