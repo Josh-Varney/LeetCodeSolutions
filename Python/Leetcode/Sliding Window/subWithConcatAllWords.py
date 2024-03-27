@@ -32,7 +32,7 @@ class Solution:
         
         return res
     
-    def findSubstringTwo(self, s: str, word: list[str]) -> list[int]:
+    def findSubstringTwo(self, s: str, word: list[str]) -> list[int]:  # Mapping improved memory and increased speed of execution
         if not word:
             return []
         
