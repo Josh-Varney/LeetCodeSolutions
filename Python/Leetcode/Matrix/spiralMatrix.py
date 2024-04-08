@@ -1,5 +1,5 @@
 class Solution:
-    def spiralOrder(self, matrix: list[list[int]]) -> list[int]:
+    def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         res = []
         
         left, right = 0, len(matrix[0])
@@ -30,12 +30,15 @@ class Solution:
             left += 1
             
         return res
-        
-if __name__ == '__main__':
-    solution_instance = Solution()
-    print(solution_instance.spiralOrder([[1,2,3,4],
-                                   [5,6,7,8],
-                                   [9,10,11,12]]))
-
     
+
+if __name__ == "__main__":
+    solution_instance = Solution()
+    solution_instance.spiralOrder([[1,2,3],
+                                   [4,5,6],
+                                   [7,8,9]])
+    
+    solution_instance.spiralOrder([[1,2,3,4],
+                                   [5,6,7,8],
+                                   [9,10,11,12]])
     
