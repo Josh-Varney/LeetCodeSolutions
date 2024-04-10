@@ -4,7 +4,7 @@
 
 class Solution {
     public:
-        bool isIsomorphic(std::string s, std::string t){
+        bool isIsomorphic(std::string s, std::string t){ // Not complete need to learn how to zip
             if (s.size() != t.size()){
                 return false;
             }

@@ -3,10 +3,8 @@ class Solution:
         if not nums:
             return 0
         
-        maxCount = 1
-        count = 1
+        maxCount = count = 1
         seen = set()
-        
         nums.sort()
         for r in range(len(nums)):
             
